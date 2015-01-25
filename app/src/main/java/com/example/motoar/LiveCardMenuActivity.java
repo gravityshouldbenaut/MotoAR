@@ -33,10 +33,12 @@ public class LiveCardMenuActivity extends Activity implements SensorEventListene
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        image = (ImageView) findViewById(R.id.compassView);
-        speed = (TextView) findViewById(R.id.speed);
 
-        speed.setText(new GPS_ListenerService().getSpeed());
+
+
+        image = (ImageView) findViewById(R.id.compassView);
+       // speed = (TextView) findViewById(R.id.speed);
+
         getMenuInflater().inflate(R.menu.live_card, menu);
         mSensorManager.registerListener((SensorEventListener) this, mSensorManager.getDefaultSensor(Sensor.TYPE_GYROSCOPE),
                 SensorManager.SENSOR_DELAY_GAME);
